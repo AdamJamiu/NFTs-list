@@ -5,15 +5,6 @@ import fetchDetails from '../../hooks/fetchDetails';
 import NftModal from '../NftModal';
 import AppContext from '../../context/appContext';
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'var(--primary-color)',
-    p: 4,
-};
 
 export const GridCard = () => {
     const { data } = fetchDetails();
