@@ -2,7 +2,7 @@ import * as React from 'react';
 import BoltIcon from '@mui/icons-material/Bolt';
 import "./index.css"
 import fetchDetails from '../../hooks/fetchDetails';
-import NftModal from '../NftModal';
+import NftModal from '../nftModal';
 import AppContext from '../../context/appContext';
 
 

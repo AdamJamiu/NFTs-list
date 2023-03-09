@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import GridCard from './components/GridCard'
-import Hero from './components/HeroSection'
+import React from 'react'
+import GridCard from './components/gridCard'
+import Hero from './components/heroSection'
 import AppProvider from './context/appContext/AppProvider'
-import LoadingAnimation from './components/LoadingAnimationjsx'
+import LoadingAnimation from './components/loadingAnimationjsx'
 
 
 function App() {
