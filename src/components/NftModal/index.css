@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 80vh;
+  height: fit-content;
   background-color: var(--primary-color);
   box-shadow: 24px;
   padding: 4px;
@@ -27,8 +27,12 @@
 
 .modal-img-wrapper img {
   width: 100%;
-  /* height: 100%; */
+  height: 400px;
   object-fit: cover;
+}
+
+.about-bayc{
+  line-height: 1.5;
 }
 
 .txt-secondary {
@@ -83,6 +87,22 @@
 
 .details-txt-2 {
   color: #fff !important;
+}
+
+.attr-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.attr-txt-1 {
+  color: #fff !important;
+}
+
+.attr-txt-2 {
+  color: var(--sky-color) !important;
 }
 
 /* Width for screens larger than 400px */

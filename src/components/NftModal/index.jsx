@@ -34,8 +34,10 @@ export default function NftModal() {
                                 <p className='modal-nft-name'>{name}</p>
                                 <VerifiedIcon color="primary" />
                             </div>
-                            <h1 className='txt-white'>#{data?.nft?.token_id}</h1>
-                            <p>Owned by <span className="txt-secondary">De2da2</span></p>
+                            <di className="flex-wrap">
+                                <h1 className='txt-white'>#{data?.nft?.token_id}</h1>
+                                <p>Owned by <span className="txt-secondary">De2da2</span></p>
+                            </di>
                         </div>
 
                         <div className='modal-descs-wrapper'>
@@ -45,10 +47,24 @@ export default function NftModal() {
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
                                 >
-                                    <p className='txt-white b-large'>Description</p>
+                                    <p className="txt-white b-large">Description</p>
                                 </AccordionSummary>
                                 <AccordionDetails>
-                                    <p className="txt-white">{data?.contract?.metadata?.description}</p>
+                                    <span className="txt-white">By <b>BoredApeYatchClub</b></span>
+                                </AccordionDetails>
+                            </Accordion>
+                            <Accordion disableGutters elevation={0} square className='accordion-wrapper'>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon style={{ color: 'white' }} />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <p className='txt-white b-large'>About Bored Ape Yacht Club</p>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <p className="about-bayc txt-white">
+                                        {data?.contract?.metadata?.description}
+                                    </p>
                                 </AccordionDetails>
                             </Accordion>
                             <Accordion disableGutters elevation={0} square className='accordion-wrapper'>
@@ -61,25 +77,25 @@ export default function NftModal() {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <div className="details-container">
-                                        <div className="details-wrap">
-                                            <p>Contract Address</p>
-                                            <span>{data?.contract_address}</span>
+                                        <div className="attr-wrap">
+                                            <p className="attr-txt-1">Contract Address</p>
+                                            <span className="attr-txt-2">{data?.nft?.contract_address}</span>
                                         </div>
-                                        <div className="details-wrap">
-                                            <p>Token ID</p>
-                                            <span></span>
+                                        <div className="attr-wrap">
+                                            <p className="attr-txt-1">Token ID</p>
+                                            <span className="attr-txt-2">{data?.nft?.token_id}</span>
                                         </div>
-                                        <div className="details-wrap">
-                                            <p>Token Standard</p>
-                                            <span></span>
+                                        <div className="attr-wrap">
+                                            <p className="attr-txt-1">Token Standard</p>
+                                            <span className="attr-txt-2">{data?.contract?.type}</span>
                                         </div>
-                                        <div className="details-wrap">
-                                            <p>Chain</p>
-                                            <span></span>
+                                        <div className="attr-wrap">
+                                            <p className="attr-txt-1">Chain</p>
+                                            <span className="attr-txt-2">{data?.nft?.chain}</span>
                                         </div>
-                                        <div className="details-wrap">
-                                            <p>Metadata</p>
-                                            <span></span>
+                                        <div className="attr-wrap">
+                                            <p className="attr-txt-1">Metadata</p>
+                                            <span className="attr-txt-2">Chain</span>
                                         </div>
 
                                     </div>
