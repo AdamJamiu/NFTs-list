@@ -1,9 +1,9 @@
 import React from 'react'
-import "./index.css"
 import fetchNfts from '../../hooks/fetchNfts'
 import VerifiedIcon from '@mui/icons-material/Verified';
+import "./index.css"
 
-const Hero = () => {
+export const Hero = () => {
     const { data } = fetchNfts()
 
     const name = data?.contract?.name.replace(/([a-z])([A-Z])/g, '$1 $2');
