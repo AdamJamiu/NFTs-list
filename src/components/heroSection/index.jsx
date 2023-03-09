@@ -6,10 +6,10 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 const Hero = () => {
     const { data } = fetchNfts()
 
-    console.log(data)
+    const name = data?.contract?.name.replace(/([a-z])([A-Z])/g, '$1 $2');
 
     return (
-        <div className="">
+        <>
             <div className="hero">
                 <img className='hero-cover' src={data?.contract?.metadata?.cached_banner_url} alt="" />
                 <div className='hero-thumb_nail'>
@@ -18,7 +18,7 @@ const Hero = () => {
             </div>
 
             <div className="hero-info">
-                <span className="hero-title">{data?.contract?.name}</span>
+                <span className="hero-title">{name}</span>
                 <VerifiedIcon color='primary' />
 
                 <div className='grid-container'>
@@ -31,12 +31,12 @@ const Hero = () => {
                 </div>
 
                 <div className='description_container'>
-                    <p className='description'>{data?.contract?.metadata?.description}</p> 
+                    <p className='description'>{data?.contract?.metadata?.description}</p>
                 </div>
             </div>
 
 
-        </div>
+        </>
     )
 }
 

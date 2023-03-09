@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import React from "react";
+import AppContext from "../context/appContext";
 
 export default function fetchNfts() {
-    const [data, setData] = useState([])
+    const [data, setData] = React.useState([])
     const url = "https://api.nftport.xyz/v0/nfts/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/567?chain=ethereum&refresh_metadata=false";
     const auth = "212a947d-ebf9-4fe7-9115-d65c7a47ac10";
+    const { setIsLoading } = React.useContext(AppContext);
 
     var myHeaders = new Headers();
     myHeaders.append("Authorization", auth);
@@ -14,18 +16,20 @@ export default function fetchNfts() {
         redirect: 'follow'
     };
 
-    useEffect(() => {
-
+    React.useEffect(() => {
+        setIsLoading(true);
         fetch(url, requestOptions)
             .then(response => response.json())
             .then(result => {
                 setData(result)
-                // console.log(result)
+                setIsLoading(false)
             })
-            .catch(error => console.log('error', error));
+            .catch(error => {
+                setIsLoading(false)
+                console.log('error', error)
+            });
 
     }, []);
-    // console.log(data)
 
     return { data };
 }
