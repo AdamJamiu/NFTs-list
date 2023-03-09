@@ -3,7 +3,6 @@ import BoltIcon from '@mui/icons-material/Bolt';
 import "./index.css"
 import fetchDetails from '../../hooks/fetchDetails';
 import NftModal from '../NftModal';
-import { Modal, Box } from '@mui/material';
 import AppContext from '../../context/appContext';
 
 const style = {
@@ -16,7 +15,7 @@ const style = {
     p: 4,
 };
 
-const GridCard = () => {
+export const GridCard = () => {
     const { data } = fetchDetails();
     const { handleOpen, setId } = React.useContext(AppContext);
 
