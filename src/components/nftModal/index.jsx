@@ -34,10 +34,9 @@ export default function NftModal() {
                                 <p className='modal-nft-name'>{name}</p>
                                 <VerifiedIcon color="primary" />
                             </div>
-                            <di className="flex-wrap">
+                            <div className="flex-wrap">
                                 <h1 className='txt-white'>#{data?.nft?.token_id}</h1>
-                                <p>Owned by <span className="txt-secondary">De2da2</span></p>
-                            </di>
+                            </div>
                         </div>
 
                         <div className='modal-descs-wrapper'>
@@ -112,31 +111,12 @@ export default function NftModal() {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <div className='details-container'>
-
-                                        <div className='details-wrap'>
-                                            <p className='details-txt-1'>Contract Address</p>
-                                            <p className='details-txt-2'>Contract Address</p>
-                                        </div>
-                                        <div className='details-wrap'>
-                                            <p className='details-txt-1'>Token ID</p>
-                                            <p className='details-txt-2 '>Contract Address</p>
-                                        </div>
-                                        <div className='details-wrap'>
-                                            <p className='details-txt-1'>Token Standard</p>
-                                            <p className='details-txt-2 '>Contract Address</p>
-                                        </div>
-                                        <div className='details-wrap'>
-                                            <p className='details-txt-1'>Chain</p>
-                                            <p className='details-txt-2'>Contract Address</p>
-                                        </div>
-                                        <div className='details-wrap'>
-                                            <p className='details-txt-1'>Metadata</p>
-                                            <p className='details-txt-2'>Contract Address</p>
-                                        </div>
-                                        <div className='details-wrap'>
-                                            <p className='details-txt-1'>Creator Earnings</p>
-                                            <p className='details-txt-2'>Contract Address</p>
-                                        </div>
+                                        {data?.nft?.metadata?.attributes?.map(desc => (
+                                            <div key={desc.trait_type} className='details-wrap'>
+                                                <p className='details-txt-1'>{desc?.trait_type}</p>
+                                                <p className='details-txt-2'>{desc?.value}</p>
+                                            </div>
+                                        ))}
                                     </div>
 
                                 </AccordionDetails>

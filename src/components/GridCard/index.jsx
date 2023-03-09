@@ -20,15 +20,17 @@ export const GridCard = () => {
                         </div>
                         <p>{item?.token_id}</p>
                         <h2>{item?.chain}</h2>
-                        <button className='card-btn'>
-                            <BoltIcon />
-                            <span>Read More</span>
-                        </button>
+                        <a href={`https://opensea.io/assets/ethereum/${item?.contract_address}/${item?.token_id}`}>
+                            <button className='card-btn'>
+                                <BoltIcon />
+                                <span>Read More</span>
+                            </button>
+                        </a>
                     </div>
                 ))
                 }
 
-            </div>
+            </div >
 
             <NftModal />
         </>
