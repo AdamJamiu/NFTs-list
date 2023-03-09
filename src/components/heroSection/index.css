@@ -1,0 +1,73 @@
+@import "../../App.css";
+
+.hero {
+  width: 100%;
+  height: 0;
+  padding-bottom: 20%; /* 16:9 aspect ratio */
+  position: relative;
+}
+
+.hero-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-thumb_nail {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  background-color: white;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.thumb_img {
+  height: 170px;
+  width: 170px;
+  object-fit: cover;
+}
+
+/* hero info section */
+.hero-info {
+  padding: 1em;
+  margin-top: 3em;
+  color: var(--primary-color);
+}
+
+.hero-title {
+  font-size: 1.8em;
+  margin: auto;
+  font-weight: bold;
+  padding-right: 0.3em;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  gap: 2em;
+}
+
+.info-value {
+  /* font-size: small; */
+  font-weight: bold;
+}
+
+.description_container {
+  max-width: 70%;
+}
+
+.description {
+  display: inline;
+  margin-top: 0px;
+  font-size: 17px;
+  line-height: 1.5;
+}
