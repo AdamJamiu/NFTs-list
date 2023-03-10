@@ -6,7 +6,9 @@
   --sky-color: rgb(21, 178, 229);
 }
 
-html {
+html,
+body,
+* {
   font-family: "Poppins", sans-serif;
 }
 
