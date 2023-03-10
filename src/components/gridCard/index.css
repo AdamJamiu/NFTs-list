@@ -37,18 +37,30 @@
   opacity: 0.9;
 }
 
+.card-info {
+  font-weight: 300 !important;
+  color: #999;
+  font-size: small;
+}
+
+.card_cont {
+  padding: 1em;
+}
+
 .card h2 {
-  padding-left: 1em;
+  /* padding-left: 1em; */
+  line-height: normal;
   font-size: 17px;
   color: #fff;
 }
 
 .card p {
   /* margin-top: 5px; */
-  padding: 1.3em 0 0 1.3em;
+  /* padding: 1.3em 0 0 1.3em; */
   font-size: 13px;
   font-weight: bold;
   color: #ccc;
+  line-height: 1;
 }
 
 .card button {
@@ -92,5 +104,10 @@
 @media screen and (max-width: 575px) {
   .card {
     width: 100%;
+  }
+
+  .row {
+    padding: 1em 4em;
+    width: fit-content;
   }
 }

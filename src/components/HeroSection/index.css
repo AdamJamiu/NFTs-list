@@ -34,7 +34,7 @@
 
 /* hero info section */
 .hero-info {
-  padding: 1em 1em 1em 3em;
+  padding: 2em 1em 1em 3em;
   margin-top: 3em;
   /* color: var(--primary-color); */
 }
@@ -62,7 +62,7 @@
 }
 
 .description_container {
-  max-width: 70%;
+  width: 75%;
 }
 
 .description {
@@ -70,10 +70,16 @@
   margin-top: 0px;
   font-size: 17px;
   line-height: 1.5;
+  width: 100%;
 }
 
-@media (max-width) {
+@media (max-width: 750px) {
   .hero-info {
     padding: 1em;
+    margin-top: 10em;
+  }
+
+  .description_container {
+    width: 100%;
   }
 }
