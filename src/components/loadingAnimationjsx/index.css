@@ -1,7 +1,8 @@
 .animation-wrapper {
-  position: relative;
-  width: 97vw;
-  height: 97vh;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
   background-color: var(--primary-color);
 }
 

@@ -15,6 +15,8 @@ export default function NftModal() {
     const { data } = retreiveNftsDetails(id);
     // spliting the camel cased name
     const name = data?.contract?.name.replace(/([a-z])([A-Z])/g, '$1 $2');
+    const str = data?.nft?.contract_address.substr(0, 5)
+    const lastFour = data?.nft?.contract_address.substr(-4)
 
     return (
 
@@ -82,7 +84,11 @@ export default function NftModal() {
                                         <div className="details-container">
                                             <div className="attr-wrap">
                                                 <p className="attr-txt-1">Contract Address</p>
-                                                <span className="attr-txt-2">{data?.nft?.contract_address}</span>
+                                                <a
+                                                    href={`${data?.nft?.contract_address}`}
+                                                    className="attr-txt-2"
+                                                >
+                                                    {str}...{lastFour}</a>
                                             </div>
                                             <div className="attr-wrap">
                                                 <p className="attr-txt-1">Token ID</p>
@@ -129,7 +135,7 @@ export default function NftModal() {
                             </div>
                         </div>)}
             </div>
-        </Modal>
+        </Modal >
 
     );
 }
