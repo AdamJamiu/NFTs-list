@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 700px;
+  /* width: 700px; */
   height: 800px;
   height: fit-content;
   background-color: transparent;
@@ -119,8 +119,8 @@
 /* Width for screens larger than 400px */
 @media (min-width: 400px) {
   .modal-wrapper {
-    max-width: 60vw;
-    min-width: 50vw;
+    /* max-width: 60vw;
+    min-width: 50vw; */
   }
 
   .modal-content {

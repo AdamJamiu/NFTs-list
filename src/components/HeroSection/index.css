@@ -34,7 +34,7 @@
 
 /* hero info section */
 .hero-info {
-  padding: 1em 1em 1em 3em ;
+  padding: 1em 1em 1em 3em;
   margin-top: 3em;
   /* color: var(--primary-color); */
 }
@@ -70,4 +70,10 @@
   margin-top: 0px;
   font-size: 17px;
   line-height: 1.5;
+}
+
+@media (max-width) {
+  .hero-info {
+    padding: 1em;
+  }
 }

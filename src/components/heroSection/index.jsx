@@ -25,9 +25,7 @@ export const Hero = () => {
                     <div>
                         <p>Created at: <span className='info-value'>{data?.nft?.mint_date}</span></p>
                     </div>
-                    <div>
-                        <p>Created at: <span className='info-value'>{data?.nft?.mint_date}</span></p>
-                    </div>
+
                 </div>
 
                 <div className='description_container'>
