@@ -7,7 +7,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import SkeletonAnimation from "./Skeleton";
+import spinner from '../../assets/spinner.svg'
 import './index.css';
 
 export default function NftModal() {
@@ -25,9 +25,13 @@ export default function NftModal() {
             aria-describedby="modal-modal-description"
         >
             <div className='modal-wrapper'>
-                {!isLoaded ? <SkeletonAnimation />
+                {!isLoaded ?
+                    <div className='spinner-img'>
+                        <img src={spinner} width={20} height={20} alt="spinner" />
+                    </div>
                     :
-                    (<div className='modal-content'>
+                    (
+                    <div className='modal-content'>
                         <div className='modal-img-wrapper'>
                             <img src={data?.nft?.cached_file_url} />
                             <div className='modal-name-wrap'>
