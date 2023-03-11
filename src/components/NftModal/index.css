@@ -12,6 +12,21 @@
   color: #fff !important;
 }
 
+.retry-wrap {
+  display: flex;
+  padding: 1em;
+  flex-direction: row;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.retry-wrap > * {
+  color: #fff !important;
+  cursor: pointer;
+}
+
 .modal-content {
   display: flex;
   flex-direction: column;
@@ -130,5 +145,25 @@
 
   .details-wrap {
     width: 40%;
+  }
+}
+
+@media (max-width: 400px) {
+  .modal-content {
+    width: 80vw;
+    height: max-content;
+    overflow-y: auto;
+  }
+
+  .modal-wrapper {
+    overflow-y: auto;
+  }
+
+  .modal-img-wrapper {
+    width: 100%;
+  }
+
+  .modal-descs-wrapper {
+    width: 100%;
   }
 }
